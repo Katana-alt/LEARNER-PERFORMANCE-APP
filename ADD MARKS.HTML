@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Learner Marks</title>
+</head>
+<body>
+    <h1>Add Learner Marks</h1>
+    <form method="post">
+        <label for="name">Learner Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="ENG">English (ENG):</label>
+        <input type="number" id="ENG" name="ENG" min="0" required><br><br>
+        <label for="MATH">Math (MATH):</label>
+        <input type="number" id="MATH" name="MATH" min="0" required><br><br>
+        <label for="KISW">Kiswahili (KISW):</label>
+        <input type="number" id="KISW" name="KISW" min="0" required><br><br>
+        <label for="SCIE">Science (SCIE):</label>
+        <input type="number" id="SCIE" name="SCIE" min="0" required><br><br>
+        <label for="SST">Social Studies (SST):</label>
+        <input type="number" id="SST" name="SST" min="0" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="{{ url_for('index') }}">Back to Rankings</a>
+</body>
+</html>

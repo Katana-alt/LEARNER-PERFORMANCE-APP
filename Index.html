@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learners Rankings</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Learners Rankings</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>English (ENG)</th>
+                <th>Math (MATH)</th>
+                <th>Kiswahili (KISW)</th>
+                <th>Science (SCIE)</th>
+                <th>Social Studies (SST)</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for learner in learners %}
+            <tr>
+                <td>{{ learner.rank }}</td>
+                <td>{{ learner.name }}</td>
+                <td>{{ learner.marks.ENG }}</td>
+                <td>{{ learner.marks.MATH }}</td>
+                <td>{{ learner.marks.KISW }}</td>
+                <td>{{ learner.marks.SCIE }}</td>
+                <td>{{ learner.marks.SST }}</td>
+                <td>{{ learner.total }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('add_marks') }}">Add Marks</a>
+</body>
+</html>
